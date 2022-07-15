@@ -1,0 +1,438 @@
+/* -------------------- 
+    Isaac Odrosky
+skillexchange/style.css
+    07/11/2022 
+--------------------- */
+
+/* declare custom properties */
+:root {
+  --dark-blue: #262c5d;
+  --light-blue: #2738b6;
+  --light-grey: #c6c6c6;
+  --grey: #454545;
+}
+
+/* -----------
+    RESETS
+------------ */
+
+/* reset sizing to border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* reset default styles, set bg */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+body {
+  background: linear-gradient(#566aff, #d6baf6);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--dark-blue);
+}
+
+/* GLOBAL HEADER/NAV STYLES */
+header {
+  width: 100%;
+  padding: 1.5%;
+  background-color: rgb(255, 255, 255, 0.7);
+  box-shadow: 10px 0 10px rgb(0, 0, 0, 0.3);
+  text-align: center;
+  color: var(--grey);
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 span {
+  font-size: 1.3rem;
+  color: var(--light-blue);
+}
+
+header h1 {
+  font-size: 1.7rem;
+  font-family: 'Fredoka One', sans-serif;
+  color: var(--dark-blue);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+
+nav a {
+    margin: auto 0;
+    font-size: 1.5rem;
+    color: var(--light-blue);
+}
+
+nav a:hover {
+    color: var(--grey);
+}
+
+/* GLOBAL FOOTER STYLES */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1.5%;
+  background-color: rgb(255, 255, 255, 0.7);
+  box-shadow: -10px 0 10px rgb(0, 0, 0, 0.3);
+  color: var(--grey);
+}
+
+footer p {
+  font-size: 1rem;
+  margin-right: 1%;
+}
+
+footer a {
+  display: inline-block;
+  margin: 0 1%;
+  color: var(--grey);
+  font-size: 1.1rem;
+}
+
+footer a:hover {
+  color: var(--light-blue);
+}
+
+/* --------------
+    EVENT PAGE 
+--------------- */
+
+
+/* main page container - set grid display */
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    justify-content: center;
+    width: 100%;
+    margin: 5% auto;
+}
+
+/* event section styles */
+.event-flag {
+  padding: 2%;
+  background-color: var(--light-blue);
+  width: 20%;
+  text-align: center;
+  position: absolute;
+  top: -1%;
+  left: 0;
+  transform: skew(0, -18deg);
+  box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.3);
+}
+
+.event-flag > p {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.event-container {
+  width: 90%;
+  margin: 0 auto;
+  grid-column: 1 / span 4;
+  background-color: rgb(255, 255, 255);
+  padding: 3.5em 4.5em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 80px;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+  position: relative;
+  align-self: center;
+}
+
+.event-container h2 {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 2.5rem;
+  color: var(--light-blue);
+  margin: 5% 0 1% 0;
+}
+
+.event-container h3 {
+  font-size: 1.4rem;
+  color: var(--light-blue);
+  font-weight: 700;
+}
+
+.event-container > p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin: 1% 5%;
+  color: var(--dark-blue);
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  margin: 2% auto 4% auto;
+}
+
+.list-container ul {
+  font-size: 1.1rem;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.rsvp-btn {
+  display: block;
+  width: 30%;
+  margin: 3% auto 0 auto;
+  padding: 2% 4%;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  color: #fff;
+  background-image: linear-gradient(45deg, #566aff, #d6baf6);
+  background-repeat: no-repeat;
+  background-size: 500%;
+  background-position: bottom left;
+  transition: background-position 1s;
+}
+
+.rsvp-btn:hover,
+.rsvp-btn:focus {
+  background-position: top right;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.3);
+}
+
+/* about styles */
+.about-container {
+    text-align: center;
+    width: 90%;
+    grid-column: 5 / span 2;
+    background-color: rgb(255, 255, 255, 0.7);
+    align-self: center;
+    margin: 0 2% 0 0;
+    padding: 5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.about-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5%;
+}
+
+.icon-container {
+    width: 70%;
+    margin: 2% auto;
+    padding: 3%;
+    border-bottom: 1px solid var(--grey);
+}
+
+.last-icon-container {
+    width: 70%;
+    margin: 2% auto;
+    padding: 3%;
+}
+
+.about-icon {
+    font-size: 4.5rem;
+    color: var(--light-blue);
+}
+
+.about-container h3 {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 4%;
+}
+
+/* image styles */
+.img-container {
+    width: 80%;
+    grid-column: 1 / span 2;
+    margin: 5% 4% 0 auto;
+    align-self: center;
+}
+
+.img-container h2 {
+    display: none;
+}
+
+.img-container img {
+    width: 100%;
+    margin: 2% auto;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+/* FAQ styles */
+.faq-container {
+    grid-column: 3 / span 4;
+    align-self: center;
+    width: 90%;
+    margin: 5% auto;
+    padding: 4%;
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.faq-container h2 {
+    font-size: 2rem;
+    font-family: 'Fredoka One', sans-serif;
+    text-align: center;
+    color: var(--dark-blue);
+    margin: 3% 0;
+}
+
+.faq-container h3 {
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+    margin-bottom: 1%;
+}
+
+.faq-container p {
+    color: var(--light-blue);
+    font-size: 1.1rem;
+    margin-bottom: 3%;
+    line-height: 1.6rem;
+}
+
+.faq-container p > a {
+    color: var(--dark-blue);    
+}
+
+.faq-container p > a:hover {
+    color: var(--light-grey);
+    text-decoration: underline;
+}
+
+/* -------------
+    RSVP PAGE
+-------------- */
+
+.form-container label {
+    display: none;
+}
+
+/* display label for checkbox input */
+.form-container label:last-of-type {
+    display: inline;
+    font-size: 1.1rem;
+}
+
+input {
+    border: none;
+    border-bottom: 3px solid var(--light-blue);
+    margin: 2%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+    padding: 1% 0 0 0;
+    accent-color: var(--light-blue);
+}
+
+::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.1rem;
+}
+
+/* adjust street address input width */
+#address {
+    width: 60%;
+}
+
+.submit-btn {
+    border: none;
+    padding: 2% 4%;
+    display: block;
+    margin: 3% auto;
+    width: 70%;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 5px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #566aff, #d6baf6);
+    background-repeat: no-repeat;
+    background-size: 500%;
+    background-position: bottom left;
+    transition: background-position 1s;
+}
+
+.submit-btn:hover, .submit-btn:focus {
+    background-position: top right;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.3);
+}
+
+.submit-btn:active {
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.3);
+}
+
+/* -----------------
+    SUCCESS PAGE
+------------------ */
+.success-container {
+    margin: 5% auto 0 auto;
+}
+
+.success-container p {
+    font-size: 1.2rem;
+    margin-bottom: 3%;
+}
+
+.success-container iframe {
+    width: 90%;
+}
+
+/* ---------------
+RESPONSIVE STYLES
+---------------- */
+
+/* tablet & smaller viewports */
+@media only screen and (max-width: 800px) {
+    nav {
+        width: 20%;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .event-container {
+        width: 90%;
+        margin: 3% auto;
+    }   
+
+    .about-container {
+        width: 90%;
+        margin: 3% auto;
+    }
+
+    .all-icons {
+        display: flex;
+    }
+
+    .icon-container {
+        border: none;
+        border-right: 1px solid var(--grey);
+    }
+
+    .img-container {
+        width: 90%;
+        margin: 3% auto;
+    }
+
+    .faq-container {
+        width: 90%;
+        margin: 3% auto;
+    }
+}
